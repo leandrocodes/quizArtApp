@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar color="myc">
+    <ion-title>
+      <h1 class="header">Login</h1>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="background">
+
+  <img src="https://firebasestorage.googleapis.com/v0/b/quizart-6eed4.appspot.com/o/Ativo%205.png?alt=media&token=14cd0778-e005-422f-839e-5c419933ded9"
+    alt="">
+
+  <form (ngSubmit)="login()" [formGroup]="loginForm">
+
+    <ion-list inset>
+
+      <ion-item class="log-input" [ngClass]="{ invalid: emailErrors.hasError('*', ['touched', 'dirty']) }">
+        <ion-label floating class="label">
+          Email:
+        </ion-label>
+        <ion-input type="text" formControlName="email"></ion-input>
+      </ion-item>
+
+      <div class="erros" ngxErrors="email" #emailErrors="ngxErrors">
+        <div [ngxError]="['email', 'required']" [when]="['touched', 'dirty']">Insira um e-mail válido.</div>
+      </div>
+
+      <ion-item class="log-input" [ngClass]="{ invalid: passwordErrors.hasError('*', ['touched']) }">
+        <ion-label floating class="label">
+          Senha:
+        </ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+
+      <div class="erros" ngxErrors="password" #passwordErrors="ngxErrors">
+        <div [ngxError]="['minlength', 'required']" [when]="['touched']">A senha deve conter mais de 5 caracteres.</div>
+      </div>
+    </ion-list>
+
+    <div padding-horizontal>
+      <div class="form-error">{{loginError}}</div>
+
+      <div id="topButtons">
+        <button ion-button type="submit" [disabled]="!loginForm.valid">Login</button>
+      </div>
+
+
+
+    </div>
+  </form>
+  <div class="log-btn">
+    <button ion-button icon-left block clear (click)="loginWithGoogle()">
+      <ion-icon name="logo-googleplus"></ion-icon>
+      Entrar com o Google
+    </button>
+
+    <button ion-button icon-left block clear (click)="signup()">
+      <ion-icon name="md-person-add"></ion-icon>
+      Registrar uma conta
+    </button>
+  </div>
+
+
+</ion-content>

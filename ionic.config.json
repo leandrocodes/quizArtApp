@@ -1,0 +1,8 @@
+{
+  "name": "quizart",
+  "app_id": "ff4505c3",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

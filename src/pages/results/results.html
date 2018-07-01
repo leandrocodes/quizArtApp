@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Trivia</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid *ngIf = "results">
+    <ion-row>
+      <ion-col width-50 offset-25>       
+        <h2 class="feedback">
+          Seus resultados
+        </h2>
+        <h1>
+            Você acertou {{correctTotal}} de um total de {{quizTotal}}!
+        </h1>
+        <p *ngIf="correctTotal === quizTotal">
+          Você é o mestre do Quiz!
+        </p>
+        <p *ngIf="correctTotal/quizTotal >= .75">
+          Você quase conseguiu todas, continue tentando!
+        </p>
+        <p *ngIf="correctTotal/quizTotal < .75">
+          Vamos lá, você consegue! Tente novamente!
+        </p>
+        <ion-list>
+          <ion-item *ngFor="let result of results">
+            Resposta correta: {{result.correctAnswer}}
+            
+            Sua escolha: {{result.yourAnswer}}
+          </ion-item>  
+        </ion-list>
+        <div class="center">
+          <button ion-button (click)="backHome()">Voltar para o início</button>
+        </div>
+        <div class="center">
+          <button ion-button (click)="restart()">Jogar as mesmas questões novamente</button>
+        </div>  
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

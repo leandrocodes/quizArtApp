@@ -1,0 +1,55 @@
+page-about {
+    .col1{
+        text-align: center;
+        margin-top: 5vh;
+        height: 25vh;
+        background-color: rgba(117, 54, 37, 0.596);
+        
+        button{
+            color: rgb(255, 255, 255);
+            background-color: transparent;
+            margin-bottom: 15%;
+        }
+
+    }
+
+    .col2{
+        text-align: center;
+        margin-top: 5vh;
+        height: 25vh;
+        background-color: rgba(41, 168, 92, 0.774);
+
+        button{
+            color: rgb(255, 255, 255);
+            background-color: transparent;
+            margin-bottom: 15%;
+        }
+    }
+
+
+    .col3{
+        text-align: center;
+        height: 25vh;
+        background-color: rgba(102, 153, 254, 0.753);
+
+        button{
+            color: rgb(255, 255, 255);
+            background-color: transparent;
+            margin-bottom: 15%;
+        }
+    }
+
+
+    .col4{
+        text-align: center;
+        height: 25vh;
+        background-color: rgba(141, 141, 141, 0.753);
+
+        button{
+            margin-bottom: 15%;
+            color: rgb(255, 255, 255);
+            background-color: transparent;
+        }
+    }
+
+}

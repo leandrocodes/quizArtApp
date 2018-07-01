@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Adicionar Questão</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class ="background">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col width-100>
+        <ion-list>
+          <form>
+            <!-- categoria -->
+            <ion-item class = "log-input">
+              <ion-label>Categoria</ion-label>
+              <ion-select [(ngModel)]="category" name="catergory" value="number">
+                <ion-option value=12>Cinema e Fotografia</ion-option>
+                <ion-option value=11>Dança e Teatro</ion-option>
+                <ion-option value=25>Pintura e Escultura</ion-option>
+                <ion-option value=25>Música e Literatura</ion-option>
+              </ion-select>
+            </ion-item>
+            <!-- dificuldade -->
+            <ion-item class = "log-input">
+              <ion-label>Dificuldade</ion-label>
+              <ion-select [(ngModel)]="difficulty" name="difficulty" value="string">
+                <ion-option value="easy">Fácil</ion-option>
+                <ion-option value="medium">Médio</ion-option>
+                <ion-option value="hard">Difícil</ion-option>
+              </ion-select>
+            </ion-item>
+            <!-- texto da questão -->
+            <ion-item class = "log-input">
+              <ion-textarea placeholder="Escreva aqui a questão"></ion-textarea>
+            </ion-item>
+
+
+            <ion-item class = "log-input"> 
+              <ion-label floating> Alternativa 1: </ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+
+
+            <ion-item class = "log-input">
+              <ion-label floating> Alternativa 2: </ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+
+
+            <ion-item class = "log-input">
+              <ion-label floating> Alternativa 3: </ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+
+            <ion-item class = "log-input">
+              <ion-label floating> Alternativa 4: </ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+
+            <div id="topButtons">
+              <button ion-button type="submit" block>Adicionar</button>
+            </div>
+
+
+          </form>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
